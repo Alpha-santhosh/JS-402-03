@@ -1,5 +1,5 @@
 function create() {
-    var text = document.getElementsByTagName("input")[0].value
+    const text = document.getElementById("txt").value
     console.log(text)
     if(text.length != 0)
     {
@@ -14,8 +14,11 @@ function create() {
         li.appendChild(del_btn)
         del_btn.onclick=function(){
             div.innerHTML=""
+            document.getElementById("txt").focus()
+            document.getElementById("txt").value=""
         }
         del_btn.style.marginLeft="15px"
         div.style.marginTop="10px"
     }
+
 }
